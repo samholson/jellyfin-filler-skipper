@@ -1,0 +1,33 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <AssemblyName>Jellyfin.Plugin.AnimeFiller</AssemblyName>
+    <RootNamespace>Jellyfin.Plugin.AnimeFiller</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Jellyfin.Controller" Version="10.10.0" PrivateAssets="All" />
+    <PackageReference Include="Jellyfin.Model" Version="10.10.0" PrivateAssets="All" />
+    <PackageReference Include="HtmlAgilityPack" Version="1.11.61" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Configuration/configPage.html" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <AssemblyAttribute Include="System.Runtime.CompilerServices.InternalsVisibleTo">
+      <_Parameter1>Jellyfin.Plugin.AnimeFiller.Tests</_Parameter1>
+    </AssemblyAttribute>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="Jellyfin.Plugin.AnimeFiller.Tests\**" />
+    <EmbeddedResource Remove="Jellyfin.Plugin.AnimeFiller.Tests\**" />
+    <None Remove="Jellyfin.Plugin.AnimeFiller.Tests\**" />
+  </ItemGroup>
+
+</Project>
