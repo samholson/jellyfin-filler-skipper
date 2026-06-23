@@ -13,3 +13,6 @@
 # OS metadata
 .DS_Store
 Thumbs.db
+
+# Test results
+[Tt]est[Rr]esults/
